@@ -1,0 +1,30 @@
+{
+  "name": "bigloop-call-button",
+  "version": "0.6.1",
+  "private": true,
+  "description": "Bigloop Call Button & Contact Bar (Free).",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "test:js": "wp-scripts test-unit-jest --config tests/js/jest.config.js",
+    "lint:js": "wp-scripts lint-js assets/src ../../packages/ui/src"
+  },
+  "dependencies": {
+    "@bigloop/ui": "*",
+    "@wordpress/api-fetch": "^8.0.0",
+    "@wordpress/element": "^10.0.0",
+    "@wordpress/hooks": "^5.0.0",
+    "@wordpress/i18n": "^7.0.0",
+    "@wordpress/url": "^5.0.0",
+    "lucide-react": "^1.66.0"
+  },
+  "devDependencies": {
+    "@babel/runtime": "^8.0.10",
+    "@wordpress/scripts": "^37.0.0",
+    "jest": "^30.5.2",
+    "jest-environment-jsdom": "^30.5.2",
+    "lucide-static": "^1.66.0",
+    "simple-icons": "^16.36.0"
+  }
+}

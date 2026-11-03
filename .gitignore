@@ -1,0 +1,14 @@
+node_modules/
+vendor/
+/dist/
+.phpunit.result.cache
+.phpunit.cache/
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+/tests/e2e/test-results/
+/tests/e2e/.wp/
+# Build output is generated; release zips include it.
+plugins/*/assets/build/

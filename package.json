@@ -1,0 +1,21 @@
+{
+  "name": "bigloop-call-button-repo",
+  "private": true,
+  "description": "Bigloop Call Button & Contact Bar: floating call, WhatsApp and contact buttons for WordPress.",
+  "license": "GPL-2.0-or-later",
+  "workspaces": [
+    "packages/ui",
+    "plugins/bigloop-call-button"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "npm run build --workspace=bigloop-call-button",
+    "start": "npm run start --workspace=bigloop-call-button",
+    "test:js": "npm run test:js --workspace=bigloop-call-button",
+    "lint:js": "npm run lint:js --workspace=bigloop-call-button",
+    "lint:php": "node tools/php-lint.mjs plugins",
+    "test:php": "php plugins/bigloop-call-button/tests/php/run.php"
+  }
+}

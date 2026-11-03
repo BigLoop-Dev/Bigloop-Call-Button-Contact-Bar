@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<ruleset name="Bigloop Call Button">
+	<description>WordPress Coding Standards + PHP 7.4 compatibility.</description>
+
+	<file>.</file>
+	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/assets/build/*</exclude-pattern>
+	<exclude-pattern>/tests/*</exclude-pattern>
+
+	<arg name="extensions" value="php"/>
+	<arg value="sp"/>
+	<arg name="parallel" value="8"/>
+
+	<config name="testVersion" value="7.4-"/>
+	<config name="minimum_wp_version" value="6.5"/>
+
+	<rule ref="WordPress">
+		<!-- PSR-4 class files (Plugin.php), not WP's class-*.php naming. -->
+		<exclude name="WordPress.Files.FileName"/>
+		<!-- "?:" is used deliberately for "value or fallback" (empty string, 0 and null all mean "not set"). -->
+		<exclude name="Universal.Operators.DisallowShortTernary"/>
+		<!-- $default and $class are part of the public API (Api::setting(), Api::register_*()); renaming them would break callers using named arguments. -->
+		<exclude name="Universal.NamingConventions.NoReservedKeywordParameterNames"/>
+	</rule>
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="bigloop-call-button"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="blcb"/>
+				<element value="bigloop_cb"/>
+				<element value="bigloop_call_button"/>
+				<element value="Bigloop\CallButton"/>
+			</property>
+		</properties>
+	</rule>
+	<!-- Hook names intentionally use "/" separators (bigloop_cb/loaded). -->
+	<rule ref="WordPress.NamingConventions.ValidHookName">
+		<properties>
+			<property name="additionalWordDelimiters" value="/"/>
+		</properties>
+	</rule>
+	<rule ref="PHPCompatibilityWP"/>
+</ruleset>

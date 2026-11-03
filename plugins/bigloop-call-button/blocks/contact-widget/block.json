@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bigloop/contact-widget",
+	"version": "0.2.0",
+	"title": "Contact Widget",
+	"category": "widgets",
+	"icon": "phone",
+	"description": "Show one of your Bigloop contact widgets as buttons in the content, or as a floating widget on this page.",
+	"keywords": [ "call", "phone", "whatsapp", "contact", "button" ],
+	"textdomain": "bigloop-call-button",
+	"attributes": {
+		"widgetId": { "type": "integer", "default": 0 },
+		"display": { "type": "string", "enum": [ "inline", "floating" ], "default": "inline" },
+		"align": { "type": "string", "enum": [ "left", "center", "right" ], "default": "left" }
+	},
+	"supports": {
+		"html": false,
+		"spacing": { "margin": true }
+	}
+}

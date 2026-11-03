@@ -1,0 +1,82 @@
+// Scoped base: normalises WP admin form/heading styles inside the app only.
+
+.blcb-app {
+	font-family: var(--bl-font);
+	font-size: var(--bl-text-md);
+	line-height: var(--bl-leading);
+	color: var(--bl-text);
+	-webkit-font-smoothing: antialiased;
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		color: var(--bl-text);
+		margin: 0;
+		padding: 0;
+		font-weight: 600;
+		line-height: var(--bl-leading-tight);
+	}
+
+	p {
+		margin: 0;
+		font-size: inherit;
+		line-height: inherit;
+	}
+
+	a {
+		color: var(--bl-accent-600);
+		text-decoration: none;
+
+		&:hover {
+			color: var(--bl-accent-700);
+			text-decoration: underline;
+		}
+
+		&:focus-visible {
+			outline: none;
+			box-shadow: var(--bl-focus);
+			border-radius: 4px;
+		}
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li {
+		margin: 0;
+	}
+
+	code {
+		font-family: var(--bl-font-mono);
+		font-size: 0.92em;
+		background: var(--bl-gray-100);
+		padding: 1px 6px;
+		border-radius: 4px;
+	}
+
+	.bl-visually-hidden {
+		position: absolute !important;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
+	.bl-muted {
+		color: var(--bl-text-muted);
+	}
+}

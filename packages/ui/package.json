@@ -1,0 +1,16 @@
+{
+  "name": "@bigloop/ui",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Bigloop admin design system: tokens and React components for WordPress admin apps. Uses WordPress-bundled React via @wordpress/element.",
+  "license": "GPL-2.0-or-later",
+  "main": "src/index.js",
+  "sideEffects": [
+    "*.scss",
+    "*.css"
+  ],
+  "peerDependencies": {
+    "@wordpress/element": "*",
+    "@wordpress/i18n": "*"
+  }
+}

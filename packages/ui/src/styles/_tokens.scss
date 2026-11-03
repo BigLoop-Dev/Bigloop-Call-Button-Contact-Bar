@@ -1,0 +1,97 @@
+// Bigloop design tokens. Everything is scoped under .blcb-app so WordPress admin styles are untouched.
+// Brand accent is a placeholder (indigo) until Bigloop brand colours are supplied: change --bl-accent-*.
+
+.blcb-app {
+	// Brand
+	--bl-accent-50: #eef2ff;
+	--bl-accent-100: #e0e7ff;
+	--bl-accent-200: #c7d2fe;
+	--bl-accent-500: #6366f1;
+	--bl-accent-600: #4f46e5;
+	--bl-accent-700: #4338ca;
+	--bl-accent-contrast: #ffffff;
+
+	// Neutrals (slate)
+	--bl-gray-0: #ffffff;
+	--bl-gray-25: #fbfcfd;
+	--bl-gray-50: #f8fafc;
+	--bl-gray-100: #f1f5f9;
+	--bl-gray-200: #e2e8f0;
+	--bl-gray-300: #cbd5e1;
+	--bl-gray-400: #94a3b8;
+	--bl-gray-500: #64748b;
+	--bl-gray-600: #475569;
+	--bl-gray-700: #334155;
+	--bl-gray-800: #1e293b;
+	--bl-gray-900: #0f172a;
+
+	// Semantic (AA contrast for text on its own bg)
+	--bl-success-bg: #ecfdf5;
+	--bl-success-fg: #047857;
+	--bl-success-border: #a7f3d0;
+	--bl-warning-bg: #fffbeb;
+	--bl-warning-fg: #b45309;
+	--bl-warning-border: #fde68a;
+	--bl-danger-bg: #fef2f2;
+	--bl-danger-fg: #b91c1c;
+	--bl-danger-border: #fecaca;
+	--bl-info-bg: #eff6ff;
+	--bl-info-fg: #1d4ed8;
+	--bl-info-border: #bfdbfe;
+
+	// Surfaces
+	--bl-surface: var(--bl-gray-0);
+	--bl-surface-muted: var(--bl-gray-50);
+	--bl-canvas: #f4f6fa;
+	--bl-border: var(--bl-gray-200);
+	--bl-border-strong: var(--bl-gray-300);
+	--bl-text: var(--bl-gray-900);
+	--bl-text-muted: var(--bl-gray-600);
+	--bl-text-subtle: var(--bl-gray-500);
+	--bl-focus: 0 0 0 2px var(--bl-gray-0), 0 0 0 4px var(--bl-accent-500);
+
+	// Spacing (4px base)
+	--bl-space-1: 4px;
+	--bl-space-2: 8px;
+	--bl-space-3: 12px;
+	--bl-space-4: 16px;
+	--bl-space-5: 20px;
+	--bl-space-6: 24px;
+	--bl-space-8: 32px;
+	--bl-space-10: 40px;
+	--bl-space-12: 48px;
+
+	// Type
+	--bl-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--bl-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+	--bl-text-xs: 12px;
+	--bl-text-sm: 13px;
+	--bl-text-md: 14px;
+	--bl-text-lg: 16px;
+	--bl-text-xl: 20px;
+	--bl-text-2xl: 24px;
+	--bl-text-3xl: 30px;
+	--bl-leading: 1.5;
+	--bl-leading-tight: 1.25;
+
+	// Radius
+	--bl-radius-sm: 6px;
+	--bl-radius-md: 10px;
+	--bl-radius-lg: 14px;
+	--bl-radius-full: 999px;
+
+	// Elevation
+	--bl-shadow-1: 0 1px 2px rgba(15, 23, 42, 0.06), 0 1px 1px rgba(15, 23, 42, 0.04);
+	--bl-shadow-2: 0 4px 12px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.06);
+	--bl-shadow-3: 0 20px 40px rgba(15, 23, 42, 0.16), 0 4px 12px rgba(15, 23, 42, 0.08);
+
+	// Motion
+	--bl-duration-fast: 120ms;
+	--bl-duration: 200ms;
+	--bl-ease: cubic-bezier(0.2, 0, 0, 1);
+
+	@media (prefers-reduced-motion: reduce) {
+		--bl-duration-fast: 0ms;
+		--bl-duration: 0ms;
+	}
+}
